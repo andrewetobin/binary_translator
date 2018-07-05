@@ -17,14 +17,14 @@ class BinaryTranslatorTest < Minitest::Test
     assert_equal "011010", bt.translate("z")
   end
 
+  def test_it_can_translate_a_word
+    bt = BinaryTranslator.new
+
+    expected = "010100010101010010001001001110000111"
+    assert_equal expected, bt.translate("turing")
+  end
+
 
 
 
 end
-
-
-
-# bt.translate("z")
-# => "011010"
-# bt.translate("turing")
-# => "010100010101010010001001001110000111"
