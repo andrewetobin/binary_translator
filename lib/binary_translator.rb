@@ -29,4 +29,12 @@ class BinaryTranslator
       "z" => "011010"
     }
   end
+
+  def translate(string)
+    letters = string.chars
+    letters.map do |letter|
+      @alpha_to_binary[letter]
+    end.join
+  end
+
 end
