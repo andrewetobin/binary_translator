@@ -40,10 +40,15 @@ class BinaryTranslatorTest < Minitest::Test
     assert_equal "000000", bt.translate(" ")
   end
 
+  def test_it_ignores_special_characters
+    bt = BinaryTranslator.new
+
+    assert_equal "", bt.translate("!@{$#%^&*()}")
+  end
+
+
+
 end
-
-
-
 # bt.translate("!@{$#%^&*()}")
 # => ""
 # bt.translate("Hello World!")
