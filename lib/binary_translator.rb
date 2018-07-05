@@ -38,4 +38,11 @@ class BinaryTranslator
     end.join
   end
 
+  def translate_to_text(binary)
+    letters = binary.scan(/.{6}/)
+    binary_to_alpha = @alpha_to_binary.invert
+    letters.map do |letter|
+      binary_to_alpha[letter] if binary_to_alpha.include?(letter)
+    end.join
+  end
 end
