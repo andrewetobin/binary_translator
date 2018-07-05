@@ -14,20 +14,16 @@ class BinaryTranslatorTest < Minitest::Test
     bt = BinaryTranslator.new
 
     assert_equal "000001", bt.translate("a")
+    assert_equal "011010", bt.translate("z")
   end
 
-  
+
 
 
 end
 
 
-# require './lib/binary_translator'
-# => true
-# bt = BinaryTranslator.new
-# => #<BinaryTranslator:0x00007f85993a5720 @alpha_to_binary = {...}>
-# bt.translate("a")
-# => "000001"
+
 # bt.translate("z")
 # => "011010"
 # bt.translate("turing")
