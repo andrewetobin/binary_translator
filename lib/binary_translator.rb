@@ -34,7 +34,7 @@ class BinaryTranslator
   def translate(string)
     letters = string.downcase.chars
     letters.map do |letter|
-      @alpha_to_binary[letter] if @alpha_to_binary.include?(letter)
+      @alpha_to_binary[letter]
     end.join
   end
 
